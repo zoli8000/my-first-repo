@@ -1,0 +1,124 @@
+
+nav {
+  background: #222;
+  height: 60px;  
+  display: flex;
+  justify-content: center;
+  width: 600px;
+}
+
+nav button {
+  border: none;
+  background: none;
+  color: white;
+  font-size: 25px;  
+  padding: 0 20px;
+  
+}
+
+nav button:hover {
+  background: #444;
+}
+
+section {
+  display: flex;  
+  flex-direction: row;
+  width: 600px; 
+  margin-top: 20px;
+  
+}
+
+.left {  
+  flex-grow: 1;
+  width: 200px;  
+   font-family: 'Abril Fatface', cursive; 
+  font-weight: 300;    
+}
+
+.right {
+  margin-left: 10px;
+  flex-grow: 1.1;  
+  flex-basis: 300px;  
+}
+.img-holder {
+  overflow: hidden;  
+  height: 300px;  
+}
+.old {  
+  position: relative;  
+  }
+
+img {
+  width:  600px;
+  height: 300px;  
+  object-fit: shrink;
+  object-position: -150px 0px;
+  margin: 0 0 0 0px;      
+}
+
+.welcome {  
+  position: absolute;
+  top: 150px;      
+  margin-left: 20px;
+}
+
+.myname {
+  font-size: 40px;
+  margin: 0;
+  line-height: 50px;
+}
+
+.hi {
+  font-size: 20px;
+  margin: 0;
+}
+.right {  
+  font-family: 'Josefin Sans', sans-serif;  
+  margin-top: 10px;
+}
+
+p, li {  
+  margin: 0;
+  
+  line-height: 20px;
+}
+blockquote {
+  background: #444;
+  color: white;
+  font-weight: 300;
+  font-size: 40px;
+  line-height: 60px;
+  padding: 20px 10px 20px 30px;  
+  box-sizing: border-box;
+  width: 100%;  
+  margin: 0;      
+  font-family: 'Abril Fatface', cursive;  
+  position: relative;
+}
+
+h2 {
+  text-transform: uppercase;
+  margin: 30px 0px;
+}
+
+h3 {
+  margin: 15px 0 10px 0;
+  font-size: 14px;
+}
+h4 {
+  font-style: italic;
+  font-size: 12px;
+  margin: 0;
+}
+
+blockquote::before {
+  content: '“';
+  font-style: italic;
+  font-weight: 300;      
+  vertical-align: top;  
+  position: absolute;
+  font-size: 90px;
+  margin-top: -13px;
+  margin-left: -43px;
+  
+}

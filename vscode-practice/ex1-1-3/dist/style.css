@@ -1,0 +1,33 @@
+main {
+  border: 4px solid #4285f4;
+  width: 200px;
+  height: 400px;  
+}
+
+p {
+  padding-top: 30px; 
+  font-size: 30px;
+  height: 70px;
+  width: 200px;
+  color: white;  
+  text-align: center;
+  margin: 0;
+  font-weight: bold;
+  font-family: 'Baloo Thambi 2', cursive;
+}
+
+.first {
+  background: #E67676;
+}
+
+.second {
+  background: #F2F062;
+}
+
+.third {
+  background: #A9E6E6;
+}
+
+.fourth {
+  background: #7692E4;
+}

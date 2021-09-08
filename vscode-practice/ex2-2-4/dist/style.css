@@ -1,0 +1,52 @@
+.container {
+  margin: auto;
+  width: 600px;
+  height: 600px;  
+}
+
+.flex-container {
+  display: flex;
+  height: 500px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+side {
+  width: 100px;
+  height: 100%;
+}
+main {
+  width: 350px;
+  background: red;  
+  height: 100%;
+  position: relative;
+}
+
+.black {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background: black;
+  right: 20px;
+  bottom: 20px;
+}
+.left {
+  background: orange;  
+}
+
+.right {
+  background: purple;
+}
+side {
+  height: 100%;
+}
+header {
+  background: aqua;  
+  height: 100px;
+}
+
+footer {
+  background: blue;
+  height: 100px;  
+}

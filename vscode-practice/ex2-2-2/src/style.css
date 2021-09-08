@@ -1,0 +1,36 @@
+nav {
+  background: purple;
+  height: 50px;  
+  display: flex;
+  justify-content: flex-start;  
+  align-items: center;
+}
+
+button {
+  background: cyan;
+  list-style: none;
+  height: 30px;
+  flex-direction: row;
+  
+  width: 100px;
+  margin: 0 10px;
+  flex-grow: 0;
+  
+}
+
+#second {
+  flex-grow: 0.1;
+}
+.main-container {
+  display: flex;
+}
+main {
+  background: yellow;
+  height: 500px;  
+  flex-grow: 4;
+}
+
+aside {
+  flex-grow: 1;
+  background: lime;
+}
