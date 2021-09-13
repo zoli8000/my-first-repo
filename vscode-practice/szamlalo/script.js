@@ -1,0 +1,45 @@
+todoItemNo = 0
+function addToCounter(addValue) {
+    numVal = parseInt($("#counter").text())
+    numVal += addValue
+    $("#counter").text(numVal)
+}
+
+function increaseCounter() {
+    addToCounter(1)   
+}
+
+function decreaseCounter() {
+    addToCounter(-1)   
+}
+
+function removeTodo(){
+    id = $(this).parent().attr('id')
+    console.log(`Removing ${id}`)
+    $(`#${id}`).remove()
+}
+
+function checkTodo(){
+    id = $(this).parent().attr('id')
+    console.log(`Completed ${id}`)
+    $(`#${id} .check`).toggleClass("checked")
+    $(`#${id} div`).toggleClass("checked")
+}
+
+
+function todoAdd() {
+    todoElement = $("#todo-input").val()
+    recycle_button = '<img class="recycle" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjwhRE9DVFlQRSBzdmcgIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICAnaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkJz48c3ZnIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDkxIDkxIiBoZWlnaHQ9IjkxcHgiIGlkPSJMYXllcl8xIiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCA5MSA5MSIgd2lkdGg9IjkxcHgiIHhtbDpzcGFjZT0icHJlc2VydmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPjxnPjxnPjxwYXRoIGQ9Ik02Ni45MjgsODguMDdIMTcuNTQ1VjI4LjIzN0w3NSwyOC4yMzl2NTEuNzYyQzc1LDg0LjQzOCw3MS4zNjcsODguMDcsNjYuOTI4LDg4LjA3eiIgZmlsbD0iI0UwRjFGOCIvPjxwYXRoIGQ9Ik02Ni45MjgsOTAuNTgzSDE3LjU0NWMtMS4zODcsMC0yLjUxMi0xLjEyNS0yLjUxMi0yLjUxM1YyOC4yMzdjMC0wLjY2NiwwLjI2NS0xLjMwNiwwLjczNi0xLjc3NyAgICBjMC40NzEtMC40NzEsMS4xMDktMC43MzUsMS43NzUtMC43MzVsMCwwTDc1LDI1LjcyN2MxLjM4OCwwLjAwMSwyLjUxMywxLjEyNSwyLjUxMywyLjUxM3Y1MS43NjIgICAgQzc3LjUxMyw4NS44MzUsNzIuNzY0LDkwLjU4Myw2Ni45MjgsOTAuNTgzeiBNMjAuMDU5LDg1LjU1OGg0Ni44NjljMy4wNjUsMCw1LjU2LTIuNDkyLDUuNTYtNS41NTd2LTQ5LjI1TDIwLjA1OSwzMC43NVY4NS41NTh6IiBmaWxsPSIjNDU0QjUzIi8+PC9nPjxnPjxyZWN0IGZpbGw9IiM5QUJGREEiIGhlaWdodD0iMTMuNDkiIHdpZHRoPSI2NC43OCIgeD0iMTMuODgiIHk9IjE0Ljc0NyIvPjxwYXRoIGQ9Ik03OC42NiwzMC43NUgxMy44OGMtMS4zODgsMC0yLjUxMy0xLjEyNS0yLjUxMy0yLjUxM3YtMTMuNDljMC0xLjM4OSwxLjEyNS0yLjUxNCwyLjUxMy0yLjUxNGg2NC43OCAgICBjMS4zODksMCwyLjUxNCwxLjEyNSwyLjUxNCwyLjUxNHYxMy40OUM4MS4xNzQsMjkuNjI1LDgwLjA0OSwzMC43NSw3OC42NiwzMC43NXogTTE2LjM5MywyNS43MjVoNTkuNzU2di04LjQ2NkgxNi4zOTNWMjUuNzI1eiIgZmlsbD0iIzQ1NEI1MyIvPjwvZz48cGF0aCBkPSJNNTYuOTQ2LDE3LjI2MkgzNS41OWMtMS4zODgsMC0yLjUxMy0xLjEyNS0yLjUxMy0yLjUxM1YyLjY0NmMwLTEuMzg4LDEuMTI1LTIuNTEzLDIuNTEzLTIuNTEzaDIxLjM1NiAgIGMxLjM4OCwwLDIuNTEzLDEuMTI1LDIuNTEzLDIuNTEzdjEyLjEwM0M1OS40NTksMTYuMTM3LDU4LjMzNCwxNy4yNjIsNTYuOTQ2LDE3LjI2MnogTTM4LjEwMywxMi4yMzZoMTYuMzMxVjUuMTU5SDM4LjEwM1YxMi4yMzZ6IiBmaWxsPSIjNDU0QjUzIi8+PHBhdGggZD0iTTMyLjAzMyw3OC40ODFjLTEuMzg3LDAtMi41MTItMS4xMjUtMi41MTItMi41MTRWNDIuNTExYzAtMS4zODgsMS4xMjUtMi41MTMsMi41MTItMi41MTMgICBjMS4zODksMCwyLjUxNCwxLjEyNSwyLjUxNCwyLjUxM3YzMy40NTdDMzQuNTQ3LDc3LjM1NiwzMy40MjIsNzguNDgxLDMyLjAzMyw3OC40ODF6IiBmaWxsPSIjNDU0QjUzIi8+PHBhdGggZD0iTTQ2LjI3MSw3OC40ODFjLTEuMzg4LDAtMi41MTMtMS4xMjUtMi41MTMtMi41MTRWNDIuNTExYzAtMS4zODgsMS4xMjUtMi41MTMsMi41MTMtMi41MTMgICBzMi41MTMsMS4xMjUsMi41MTMsMi41MTN2MzMuNDU3QzQ4Ljc4NCw3Ny4zNTYsNDcuNjU5LDc4LjQ4MSw0Ni4yNzEsNzguNDgxeiIgZmlsbD0iIzQ1NEI1MyIvPjxwYXRoIGQ9Ik02MC41MDksNzguNDgxYy0xLjM4OCwwLTIuNTEzLTEuMTI1LTIuNTEzLTIuNTE0VjQyLjUxMWMwLTEuMzg4LDEuMTI1LTIuNTEzLDIuNTEzLTIuNTEzICAgczIuNTEzLDEuMTI1LDIuNTEzLDIuNTEzdjMzLjQ1N0M2My4wMjEsNzcuMzU2LDYxLjg5Niw3OC40ODEsNjAuNTA5LDc4LjQ4MXoiIGZpbGw9IiM0NTRCNTMiLz48L2c+PC9zdmc+">'
+    check_button = '<img class="check" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgaGVpZ2h0PSIyNCIgdmVyc2lvbj0iMS4xIiB3aWR0aD0iMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6Y2M9Imh0dHA6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL25zIyIgeG1sbnM6ZGM9Imh0dHA6Ly9wdXJsLm9yZy9kYy9lbGVtZW50cy8xLjEvIiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPjxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAgLTEwMjguNCkiPjxwYXRoIGQ9Im0yMiAxMmMwIDUuNTIzLTQuNDc3IDEwLTEwIDEwLTUuNTIyOCAwLTEwLTQuNDc3LTEwLTEwIDAtNS41MjI4IDQuNDc3Mi0xMCAxMC0xMCA1LjUyMyAwIDEwIDQuNDc3MiAxMCAxMHoiIGZpbGw9IiMyN2FlNjAiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAgMTAyOS40KSIvPjxwYXRoIGQ9Im0yMiAxMmMwIDUuNTIzLTQuNDc3IDEwLTEwIDEwLTUuNTIyOCAwLTEwLTQuNDc3LTEwLTEwIDAtNS41MjI4IDQuNDc3Mi0xMCAxMC0xMCA1LjUyMyAwIDEwIDQuNDc3MiAxMCAxMHoiIGZpbGw9IiMyZWNjNzEiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAgMTAyOC40KSIvPjxwYXRoIGQ9Im0xNiAxMDM3LjQtNiA2LTIuNS0yLjUtMi4xMjUgMi4xIDIuNSAyLjUgMiAyIDAuMTI1IDAuMSA4LjEyNS04LjEtMi4xMjUtMi4xeiIgZmlsbD0iIzI3YWU2MCIvPjxwYXRoIGQ9Im0xNiAxMDM2LjQtNiA2LTIuNS0yLjUtMi4xMjUgMi4xIDIuNSAyLjUgMiAyIDAuMTI1IDAuMSA4LjEyNS04LjEtMi4xMjUtMi4xeiIgZmlsbD0iI2VjZjBmMSIvPjwvZz48L3N2Zz4=">'
+    $("#todo-list").append(`<li id="button-${todoItemNo}"><div>${todoElement}</div>${recycle_button}${check_button}</li>`)    
+
+    $(`#button-${todoItemNo} .check`).click(checkTodo)
+    $(`#button-${todoItemNo} div`).click(checkTodo)
+    $(`#button-${todoItemNo} .recycle`).click(removeTodo)
+    todoItemNo++        
+}
+
+$("#increase").click(increaseCounter)
+$("#decrease").click(decreaseCounter)
+$("#add-todo").click(todoAdd)
+

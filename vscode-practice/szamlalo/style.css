@@ -1,0 +1,65 @@
+li div{
+    width: 240px;    
+    font-size: 20px;
+    vertical-align:middle;           
+    text-align:left;
+}
+
+li{
+    display: flex;
+    flex-direction: row;
+    vertical-align: bottom;   
+    list-style: none;
+    height: 30px;   
+    width: 300px;
+    text-align: center;
+}
+
+li img{
+    width: 20px;
+    height: 20px;    
+    padding: 5px;
+    filter: grayscale(100%); 
+}
+
+li img:hover, li div:hover{
+    background-color: #ccc;    
+}
+
+.checked{
+    filter: none; 
+}
+
+div .checked{
+    color: #aaa;
+}
+
+button{
+    border: 1px solid grey;
+    padding: 0px 20px;
+    height: 30px;
+    font-size: 20px;
+    margin: 0;    
+}
+
+h2{
+    text-transform: uppercase;    
+}
+
+.centered{
+    text-align: center;
+}
+
+input{
+    height: 30px;
+    font-size: 20px;
+    box-sizing: border-box; 
+    margin: 0;
+}
+
+#todo-container {
+    width: 400px;
+    padding: 20px;
+    background-color: #eee;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
